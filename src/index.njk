@@ -5,34 +5,20 @@ title: Terry's Portfolio
 {% extends "layout.njk" %}
 
 {% block body %}
-  <main class="p-4 font-serif mx-auto prose lg:prose-xl">
-    <div class="flex flex-row">
-      <div class="py-8 px-2">
-        <p>Hi There!  I'm <span class="inline-block font-black">Terry!</span></p>
-        <p>What do I do?  <span class="inline-block font-semibold">Programming!</span></p>
-        <p>Specifically: <span class="inline-block font-black">Full Stack Web Development!</span></p>
-      </div>
-      <img class="h-40" src="./assets/profile_pic.jpg" />
+  <main class="p-4 font-sans tracking-widest">
+    <div id="top_phrase" class="p-8 mx-auto">
+      <h1 class="text-6xl font-bold" style="text-shadow: 0px 0px 10px black;">Make it Right</h1>
+      <h1 class="text-6xl font-bold" style="text-shadow: 0px 0px 10px black;">Make it Work</h1>
+      <h1 class="text-6xl font-bold" style="text-shadow: 0px 0px 10px black;">Make the Choice</h1>
     </div>
-    
-    <h4>I love working with:</h4>
-
-    <ul class="list-none">
-      <li><span class="inline-block w-32 font-semibold">Databases:</span> MySQL, SQL Server, Postgres, MongoDB</li>
-      <li><span class="inline-block w-32 font-semibold">Back-End:</span> C#, Node.js, Python</li>
-      <li><span class="inline-block w-32 font-semibold">Front-End:</span> JavaScript ES6+, React.js, jQuery</li>
-      <li><span class="inline-block w-32 font-semibold">People:</span> <span class="inline-block text-xl font-black">Everyone!</span></li>
-    </ul>
-
-    <p>Where I am: <span class="inline-block font-semibold">London, ON, Canada</span></p>
-    
-    <h4>Hobbies outside of programming:</h4>
-    <ul class="list-none">
-      <li><span class="inline-block w-32 font-semibold">Speed cubing</span><img class="inline-block h-40" src="./assets/cubes.jpg"/></li>
-      <li><span class="inline-block w-32 font-semibold">Chess</span><img class="inline-block h-40" src="./assets/chess.jpg"/></li>
-      <li>(not great at either, but improving and having fun!)</li>
-      <li><span class="inline-block w-32 font-semibold">Music</span><img class="inline-block h-40" src="./assets/violin.jpg"/></li>
-    </ul>
-    
+    <div id="name_and_photo" class="p-8 mx-auto flex flex-row">
+      <div class="pr-4">
+        <img src="../assets/profile_pic_sq.jpg" class="rounded-full h-32 w-32 border" style="text-shadow: 0px 0px 10px black;" />
+      </div>
+      <div>
+        <h2 class="text-4xl font-black" style="text-shadow: 0px 0px 10px black;">Terry DeCoste</h2>
+        <h2 class="text-4xl font-bold" style="text-shadow: 0px 0px 10px black;">Full Stack Developer</h2>
+      </div>
+    </div>
   </main>
 {% endblock %}

@@ -6,20 +6,20 @@ title: Contact
 
 {% block body %}
   <main class="p-4 prose mx-auto">
-    <h1>Send me a message!</h1>
-    <form name="profile-contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+    <h1 class="px-8" style="text-shadow: 0px 0px 10px black;">Network Hub</h1>
+    <form name="profile-contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" class="border bg-gray-900 bg-opacity-75">
       <p class="flex">
-        <label for="name" class="inline-block w-32">Your Name: </label><input type="text" name="name" class="border border-gray-400" />
+        <label for="name" class="inline-block w-32 text-gray-200">Your Name: </label><input type="text" name="name" class="border border-gray-400" />
       </p>
       <p class="flex">
-        <label for="email" class="inline-block w-32">Your Email: </label><input type="email" name="email" class="border border-gray-400" />
+        <label for="email" class="inline-block w-32 text-gray-200">Your Email: </label><input type="email" name="email" class="border border-gray-400" />
       </p>
       <p class="flex">
-        <label for="message" class="inline-block w-32">Message: </label><textarea name="message" class="border border-gray-400" ></textarea>
+        <label for="message" class="inline-block w-32 text-gray-200">Message: </label><textarea name="message" class="border border-gray-400" ></textarea>
       </p>
       <div data-netlify-recaptcha="true"></div>
       <p>
-        <button type="submit" class="p-2 border-2 rounded-lg bg-teal-800 text-white font-semibold">Send Message</button>
+        <button type="submit" class="p-2 border-2 rounded-lg bg-gray-800 text-white font-semibold">Send Message</button>
       </p>
     </form>
   </main>

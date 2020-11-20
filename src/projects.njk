@@ -17,6 +17,8 @@ projects: [
     },
     links: {
       'Site': 'https://find-my-pizza-deal.herokuapp.com/',
+      'GitHub Node': 'https://github.com/TerryDeCoste/PizzaDealBack',
+      'GitHub React': 'https://github.com/TerryDeCoste/PizzaDealFront',
     },
   },
   {
@@ -68,8 +70,9 @@ projects: [
       'Access': 'Public',
     },
     links: {
-      'Matt Waler''s TEA Stack': 'https://dev.to/mattwaler/my-new-website-4if3',
       'Site': '#',
+      'GitHub': 'https://github.com/TerryDeCoste/PersonalProfile',
+      'Matt Waler''s TEA Stack': 'https://dev.to/mattwaler/my-new-website-4if3',
     },
   },
 ]
@@ -79,16 +82,15 @@ projects: [
 
 {% block body %}
   <main class="p-4 prose max-w-full mx-auto">
-    <h1 class="px-8">A selection of Terry's projects!</h1>
-
+    <h1 class="px-8" style="text-shadow: 0px 0px 10px black;">Project Repository</h1>
     {% for project in projects %}
-    <div class="border border-gray-600 px-8 m-0 w-4/5 mx-auto my-4">
+    <div class="border border-gray-600 px-8 m-0 mx-auto my-4 bg-gray-900 bg-opacity-75">
       <h2>{{project.title}}</h2>
       {% for line in project.description %}
-      <p>{{line}}</p>
+      <p class="text-gray-300">{{line}}</p>
       {% endfor %}
       <table>
-        <tbody>
+        <tbody class="text-gray-300">
           {% for item, desc in project.details %}
             <tr><td><span class="inline-block w-32 font-semibold">{{item}}</span></td><td>{{desc}}</td></tr>
           {% endfor %}

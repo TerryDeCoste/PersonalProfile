@@ -1,32 +1,24 @@
-<nav class="px-4 text-2xl flex flex-row flex-1">
+<nav class="px-4 text-2xl flex flex-row mx-auto">
   <a
-    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/' else 'bg-teal-300 hover:bg-teal-400' }}"
-    href="/"
+    class="w-48 py-4 px-8 border rounded-t-lg {{ 'font-bold bg-gray-700' if page.url == '/experience/' else 'bg-gray-800 hover:bg-gray-600 hover:text-black' }}"
+    href="/experience/"
   >
-    General
+    Where I've Worked
   </a>
   <a
-    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/projects/' else 'bg-teal-300 hover:bg-teal-400' }}"
+    class="w-48 py-4 px-8 border rounded-t-lg {{ 'font-bold bg-gray-700' if page.url == '/projects/' else 'bg-gray-800 hover:bg-gray-600 hover:text-black' }}"
     href="/projects"
   >
-    Projects
+    What I've Done
   </a>
   <a
-    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/story/' else 'bg-teal-300 hover:bg-teal-400' }}"
-    href="/story"
-  >
-    My Story
-  </a>
-  <a
-    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/experience/' else 'bg-teal-300 hover:bg-teal-400' }}"
-    href="/experience"
-  >
-    Experience
-  </a>
-  <a
-    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/contact/' else 'bg-teal-300 hover:bg-teal-400' }}"
+    class="w-48 py-4 px-8 border rounded-t-lg {{ 'font-bold bg-gray-700' if page.url == '/contact/' else 'bg-gray-800 hover:bg-gray-600 hover:text-black' }}"
     href="/contact"
   >
-    Contact
+    Send a Message
   </a>
+  <div class="text-xs flex flex-col justify-end">
+    <div>© 2020</div>
+    <div>Terry DeCoste</div>
+  </div>
 </nav>

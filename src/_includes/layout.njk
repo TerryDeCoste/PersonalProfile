@@ -8,13 +8,20 @@
   <title>{{ title }}</title>
   {% block head %}{% endblock %}
 </head>
-<body class="bg-teal-100 overflow-x-hidden">
-  {% include 'header.njk' %}
-  <div class="lg:container lg:mx-auto">
+<body class="bg-gray-900 overflow-x-hidden text-white flex flex-col h-screen"
+  style="background-image: url('../assets/JSBackground_fuzz.png'); background-position: left; background-repeat: no-repeat; background-size: cover;" >
+  {% if page.url != '/' %}
+  <div class="flex-grow-0">
+    {% include 'header.njk' %}
+  </div>
+  {% endif %}
+  <div class="flex-grow overflow-y-auto">
+    <div class="container mx-auto max-w-screen-md">
+      {% block body %}{% endblock %}
+    </div>
+  </div>
+  <div class="flex-grow-0 container mx-auto max-w-screen-md">
     {% include 'nav.njk' %}
-    {% block body %}{% endblock %}
-
-    {% include 'footer.njk' %}
   </div>
 </body>
 </html>
