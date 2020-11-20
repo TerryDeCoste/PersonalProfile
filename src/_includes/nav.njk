@@ -1,0 +1,32 @@
+<nav class="px-4 text-2xl flex flex-row flex-1">
+  <a
+    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/' else 'bg-teal-300 hover:bg-teal-400' }}"
+    href="/"
+  >
+    General
+  </a>
+  <a
+    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/projects/' else 'bg-teal-300 hover:bg-teal-400' }}"
+    href="/projects"
+  >
+    Projects
+  </a>
+  <a
+    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/story/' else 'bg-teal-300 hover:bg-teal-400' }}"
+    href="/story"
+  >
+    My Story
+  </a>
+  <a
+    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/experience/' else 'bg-teal-300 hover:bg-teal-400' }}"
+    href="/experience"
+  >
+    Experience
+  </a>
+  <a
+    class="flex-grow py-4 px-8 border rounded-t-lg {{ 'font-bold bg-teal-500' if page.url == '/contact/' else 'bg-teal-300 hover:bg-teal-400' }}"
+    href="/contact"
+  >
+    Contact
+  </a>
+</nav>

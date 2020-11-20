@@ -1,23 +1,17 @@
+## Hello!
+This is the repository for my Personal Portfolio website hosted on Netlify at "(I'm sure this will get filled in once I get there...)".
+
 # The TEA Stack
+This was built on the TEA stack, which I read about from Matt Waler on https://dev.to/mattwaler/my-new-website-4if3.  I chose this simple stack for it's speed, dynamic content, and pre-rendering.
 
-Welcome to the shortest stack out there. This stack combines TailwindCSS, Eleventy, and AlpineJS to make static site authoring easy and minimal!
+# More about me
+So, I am Terry DeCoste, Full Stack Developer.  I love working with:
 
-## Getting Started
+Databases: MySQL, SQL Server, Postgres, MongoDB
+Back-End: C#, Node.js, Python
+Front-End: JavaScript ES6+, React.js, jQuery
+People: Everyone!
 
-Just run the usual commands and peep the `package.json` file to see the available scripts and packages.
+Where I am: London, ON, Canada
 
-For the lazy:
-
-- `npm i` to build that big ol' `node_modules` folder
-- `npm start` to boot up that dev server and start building
-- `npm run build` when you're ready to build a production bundle
-
-**Bonus**
-`npm run build && npx serve dist` will boot up a local server of your production site!
-
-## Recommended VS Code Extensions
-
-A short list of extensions for VS Code (my primary editor) that make working with this template even more awesome!
-
-- Nunjucks Template by eseom
-- TailwindCSS Intellisense
+Hobbies outside of programming: Speed cubing, Chess (not that good at either, but improving and having fun!)

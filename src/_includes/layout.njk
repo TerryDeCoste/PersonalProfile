@@ -8,8 +8,13 @@
   <title>{{ title }}</title>
   {% block head %}{% endblock %}
 </head>
-<body>
+<body class="bg-teal-100 overflow-x-hidden">
   {% include 'header.njk' %}
-  {% block body %}{% endblock %}
+  <div class="lg:container lg:mx-auto">
+    {% include 'nav.njk' %}
+    {% block body %}{% endblock %}
+
+    {% include 'footer.njk' %}
+  </div>
 </body>
 </html>

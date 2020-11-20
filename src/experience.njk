@@ -1,0 +1,105 @@
+---
+title: Experience,
+employments: [
+  {
+    employer: 'The OTC Group',
+    dates: 'Feb 2017 - Present',
+    role: 'Data Processing Analyst Team Lead/Program Developer',
+    description: [
+      'Process all data requests, including gathering data, cleaning data, and preparing reports',
+      'Create and support internal web tools using C# ASP.NET, HTML, CSS, JavaScript, Amazon AWS',
+      'Maintain all required data security, including CASL compliance',
+      'Balance multiple competing priorities',
+      'Act as a resource for team questions, and act as a point of contact for other teams',
+      'Author and maintain process documentation',
+      'Maintain collaborative task tracking using Google Sheets and Google Apps Scripting',
+      'Analyse data as requested using Python, MS SQL, SQLite, MySQL',
+      'Maintain Time sheet information for team members, confer with management on team performance',
+    ],
+    link: 'https://www.otcgc.com/',
+  },
+  {
+    employer: 'A&R Solutions',
+    dates: 'Aug 2015 – Oct 2016',
+    role: 'Deskside/Network Support Technician',
+    description: [
+      'First point of contact for Car Dealership users for all IT requests via phone, email, text, or in person ',
+      'Travel to multiple Car Dealerships in assigned region to provide on-site support and scheduled site visits ',
+      'Utilize ConnectWise ticketing system to log all incidents and escalate to appropriate teams as needed ',
+      'Provide IT inventory reports and analysis of system health and replacement ',
+      'Install, Move, Update and maintain firewalls, routers, switches, workstations, and servers ',
+      'Provide on-call and after-hours support for multiple Dealerships ',
+      'Assist for special projects including SonicWALL and multi-workstation setup ',
+      'Inventory tracking and management for hardware, licenses, and peripherals ',
+      'Contact third-party vendors on behalf of users for support and warranty replacements ',
+      'Email administration via Office 365 and Rackspace',
+    ],
+    link: 'https://anrsolutions.ca/',
+  },
+  {
+    employer: 'Reynolds and Reynolds',
+    dates: 'Oct 2012 – Jun 2015',
+    role: 'Software Support Specialist',
+    description: [
+      'Support Linux based programs and Linux Servers (Performce, File structure, cron jobs, etc) ',
+      'Continually ranks within top 3 agents in Call Volume, with high Call Quality and Customer Satisfaction metrics ',
+      'Support and troubleshoot multiple System Backup procedures ',
+      'Provide specialized software Technical documentation for Canada-wide customers ',
+      'Participated in various projects to improve System Performance for multiple Customers ',
+      'Participated in Backup Management automation project  ',
+      'Take ownership of incident tickets by providing accountability, updates and ticket escalations in a timely manner ',
+      'Use and submit updates for proprietary information management database ',
+      'Program forms printing via command line interface ',
+      'Administer email for multiple systems ',
+      'Escalate to and work with multiple Server/Networking/Programming teams to resolve issues in a timely manner',
+    ],
+    link: 'https://www.reyrey.ca/',
+  },
+  {
+    employer: 'IBM Canada Ltd',
+    dates: 'May 2011 – Oct 2012',
+    role: 'Technical Support Analyst',
+    description: [
+      'Supported Windows XP, Windows 7, Server 2003, 2008 and MS Office  applications ',
+      'Managed Customer VMWare infrastructure via ESXi console ',
+      'Admnistration and Troubleshooting of various critical Customer Proprietary Software ',
+      'Troubleshot Customer Hardwware and  and peripherals ',
+      'Enforced Data Security policies and procedures  ',
+      'Managed Customer SLAs and Time to recovery ',
+      'Received Customer Satisfaction recognition certificate for various projects ',
+      'Troubleshot network connectivity with multiple tools ',
+      'Use Common Knowledge Management database  ',
+      'Help desk agent answering client inquiries and requests ',
+      'Ticket queue management and escalation to special teams ',
+      'Developed utilities via scripting using AutoHotKey and Powershell ',
+    ],
+    link: 'https://www.ibm.com/',
+  },
+
+]
+---
+
+{% extends "layout.njk" %}
+
+{% block body %}
+  <main class="p-4 prose max-w-full mx-auto">
+    <h1 class="px-8">Employment History</h1>
+    {% for employment in employments %}
+    <div class="border border-gray-600 px-8 m-0 w-4/5 mx-auto my-4">
+      <div class="flex flex-row justify-between">
+        <h3>{{employment.employer}}</h3><h3>{{employment.dates}}</h3>
+      </div>
+      <h3>{{employment.role}}</h3>
+      
+      <ul class="list-disc">
+      {% for line in employment.description %}
+        <li class="text-sm">{{line}}</li>
+      {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+
+    
+    
+  </main>
+{% endblock %}

@@ -1,0 +1,103 @@
+---
+title: Projects
+
+projects: [
+  {
+    title: 'Find My Pizza Deal!',
+    description: [
+      'Created for the Harvard CS50x online course, this site lets users search for the best deal in their area, depending on what type of pizza and/or side they are looking for.', 
+      'Right now, the search area is limited to London, ON, as the free Heroku database has a limited capacity.',
+    ],
+    details: {
+      'Database': 'Postgres (SQL)',
+      'Back-End': 'Node.js',
+      'Front-End': 'React.js',
+      'Host': 'Heroku.com',
+      'Access': 'Public',
+    },
+    links: {
+      'Site': 'https://find-my-pizza-deal.herokuapp.com/',
+    },
+  },
+  {
+    title: 'Mitaa',
+    description: [
+      'Created for OTC, this is a set of three core areas to gather, store, process, and display data.', 
+      'I was the primary developer for the Data Processor, and the secondary developer for the Portal, which displays data for users.', 
+      'The Data Processor gathers stored data from MySQL, validates, organizes, and then sends the data to third party APIs to resolve website hits with location services to mailable addresses.',
+      'The Processor also logs to MySQL all of the information of what was processed and mailed to be displayed on the Portal.',
+    ],
+    details: {
+      'Database': 'MySQL on Amazon Aurora, DynamoDB',
+      'Back-End': 'C# Terminal (Processor), C# MVC (Portal)',
+      'Front-End': 'JavaScript ES6+',
+      'Host': 'AWS Virtual Server, IIS',
+      'Access': 'OTC Mitaa Clients Only',
+    },
+    links: {
+      'Site': 'https://www.goportal.io/',
+    },
+  },
+  {
+    title: 'OTC Data Tools',
+    description: [
+      'This is a set of internal tools for OTC to process Excel data, gather data into reports, and several other utilties needed to check and process data.', 
+      'The Data Tools site was created to gather a group of previously disparate tools in one unified and standardized location.',
+    ],
+    details: {
+      'Database': 'SQL Server',
+      'Back-End': 'C# ASP.Net',
+      'Front-End': 'JavaScript ES6+',
+      'Host': 'IIS on Windows Server 2012',
+      'Access': 'OTC Internal Only',
+    },
+  },
+  {
+    title: 'Personal Portfolio',
+    description: [
+      'The site you''re looking at right now!', 
+      'I chose to use a lightweight static site, as this portfolio will not be heavily data-driven.  This is based on the TEA stack, which I read about in the JAMStack newsletter.',
+      'More information on the TEA stack is available at Matt Waler''s Site.',
+    ],
+    details: {
+      'Styling': 'Tailwind CSS',
+      'Responsiveness': 'Alpine.js',
+      'Frameworking': '11ty',
+      'Templates': 'Nunjucks',
+      'Host': 'Netlify.com',
+      'Access': 'Public',
+    },
+    links: {
+      'Matt Waler''s TEA Stack': 'https://dev.to/mattwaler/my-new-website-4if3',
+      'Site': '#',
+    },
+  },
+]
+---
+
+{% extends "layout.njk" %}
+
+{% block body %}
+  <main class="p-4 prose max-w-full mx-auto">
+    <h1 class="px-8">A selection of Terry's projects!</h1>
+
+    {% for project in projects %}
+    <div class="border border-gray-600 px-8 m-0 w-4/5 mx-auto my-4">
+      <h2>{{project.title}}</h2>
+      {% for line in project.description %}
+      <p>{{line}}</p>
+      {% endfor %}
+      <table>
+        <tbody>
+          {% for item, desc in project.details %}
+            <tr><td><span class="inline-block w-32 font-semibold">{{item}}</span></td><td>{{desc}}</td></tr>
+          {% endfor %}
+          {% for name, link in project.links%}
+            <tr><td><span class="inline-block w-32 font-semibold">{{name}}</span></td><td><a href="{{link}}" target="_blank">{{link}}</a></td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endfor %}
+  </main>
+{% endblock %}

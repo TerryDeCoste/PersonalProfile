@@ -1,11 +1,38 @@
 ---
-title: Home
+title: Terry's Portfolio
 ---
 
 {% extends "layout.njk" %}
 
 {% block body %}
-  <main class="p-4 prose">
-    <h1>This is the {{ title | lower }} page.</h1>
+  <main class="p-4 font-serif mx-auto prose lg:prose-xl">
+    <div class="flex flex-row">
+      <div class="py-8 px-2">
+        <p>Hi There!  I'm <span class="inline-block font-black">Terry!</span></p>
+        <p>What do I do?  <span class="inline-block font-semibold">Programming!</span></p>
+        <p>Specifically: <span class="inline-block font-black">Full Stack Web Development!</span></p>
+      </div>
+      <img class="h-40" src="./assets/profile_pic.jpg" />
+    </div>
+    
+    <h4>I love working with:</h4>
+
+    <ul class="list-none">
+      <li><span class="inline-block w-32 font-semibold">Databases:</span> MySQL, SQL Server, Postgres, MongoDB</li>
+      <li><span class="inline-block w-32 font-semibold">Back-End:</span> C#, Node.js, Python</li>
+      <li><span class="inline-block w-32 font-semibold">Front-End:</span> JavaScript ES6+, React.js, jQuery</li>
+      <li><span class="inline-block w-32 font-semibold">People:</span> <span class="inline-block text-xl font-black">Everyone!</span></li>
+    </ul>
+
+    <p>Where I am: <span class="inline-block font-semibold">London, ON, Canada</span></p>
+    
+    <h4>Hobbies outside of programming:</h4>
+    <ul class="list-none">
+      <li><span class="inline-block w-32 font-semibold">Speed cubing</span><img class="inline-block h-40" src="./assets/cubes.jpg"/></li>
+      <li><span class="inline-block w-32 font-semibold">Chess</span><img class="inline-block h-40" src="./assets/chess.jpg"/></li>
+      <li>(not great at either, but improving and having fun!)</li>
+      <li><span class="inline-block w-32 font-semibold">Music</span><img class="inline-block h-40" src="./assets/violin.jpg"/></li>
+    </ul>
+    
   </main>
 {% endblock %}
