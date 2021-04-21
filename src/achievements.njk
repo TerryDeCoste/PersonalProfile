@@ -1,0 +1,134 @@
+---
+title: Terry's Achievements
+achievements: [
+  {
+    source: 'LinkedIn Learning',
+    type: 'Online Courses',
+    courses: [
+      'Full-Stack Web Development Learning Path',
+      'NoSQL Essential Training',
+      'AWS and React: Creating Full-Stack Apps',
+      'Software Development Life Cycle (SDLC)',
+      'AWS: Deploying and Provisioning',
+      'Performance Testing Foundations',
+      'Test Automation Foundations',
+      'DevOps Foundations',
+      'Learning REST APIs',
+      'Learning NoSQL Databases',
+      'Node.js Essential Training',
+      'JavaScript Essential Training',
+      'SQL Essential Training',
+      'Angular Essential Training',
+      'React.js Essential Training',
+      'Git Essential Training: The Basics',
+      'Learning ECMAScript 6+ (ES6+)',
+      'JavaScript Essential Training (2017)',
+      'CSS Essential Training',
+      'HTML Essential Training',
+    ],
+  },
+  {
+    source: 'Harvard University',
+    type: 'Online Courses',
+    courses: [
+      'CS50X - Intro to Computer Science',
+    ],
+  },
+  {
+    source: 'Udacity',
+    type: 'Online Courses',
+    courses: [
+      'Front End Frameworks',
+      'SQL for Data Analysis',
+      'Programming Foundations with Python',
+      'How to Use Git and GitHub',
+      'Full Stack Foundations',
+      'Data Wrangling with MongoDB',
+      'Intro to Data Analysis',
+      'Intro to Statistics',
+    ],
+  },
+  {
+    source: 'Udemy',
+    type: 'Online Courses',
+    courses: [
+      'The Complete Web Developer in 2020: Zero to Mastery',
+      'CSS - The Complete Guide, Including Flexbox and Grid',
+      'NodeJS - The Complete Guide (MVC, Rest APIs, GraphQL)',
+      'React - the Complete Guide (incl Hooks, React Router)',
+      'AngularJS for Beginners',
+    ],
+  },
+  {
+    source: 'CodeAcademy',
+    type: 'Online Courses',
+    courses: [
+      'Learn PHP',
+      'Learn Java',
+    ],
+  },
+  {
+    source: 'Microsoft',
+    type: 'Certification',
+    courses: [
+      'MCP (70-410) - Microsoft Certified Professional',
+    ],
+  },
+  {
+    source: 'Axelos',
+    type: 'Certification',
+    courses: [
+      'ITILv3 Foundations',
+    ],
+  },
+  {
+    source: 'Cisco',
+    type: 'Certification',
+    courses: [
+      'CCNA (640-802) - Cisco Certified Network Associate',
+    ],
+  },
+  {
+    source: 'CompTIA',
+    type: 'Certification',
+    courses: [
+      'Security+ (Apr 2015) - CompTIA Certified',
+    ],
+  },
+  {
+    source: 'Ryerson University',
+    type: 'Post-Secondary Education',
+    courses: [
+      'Bachelor of Applied Arts - Radio and Television Arts (With Honours)',
+    ],
+  },
+]
+---
+
+{% extends "layout.njk" %}
+
+{% block body %}
+  <main class="p-4 prose max-w-full mx-auto">
+    <h1 class="px-8" style="text-shadow: 0px 0px 10px black;">Achievements Earned</h1>
+    {% for achievement in achievements %}
+    <div class="border border-gray-600 px-8 m-0 mx-auto my-4 bg-gray-900 bg-opacity-75">
+      <div class="flex flex-row justify-between items-baseline">
+        <h2 style="margin-top: 1rem; margin-bottom: 0;">{{achievement.source}}</h2>
+        <p class="text-gray-300 font-semibold" style="margin-top: 0; margin-bottom: 0;">{{achievement.type}}</p>
+      </div>
+      
+      {% if achievement.courses.length > 1 %}
+      <ul class="text-gray-300" style="columns: 2;">
+        {% for course in achievement.courses %}
+          <li class="bg-gray-200" style="--bg-opacity: 10%; margin-top: 0;">{{course}}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <ul class="text-gray-300" style="columns: 1;">
+        <li class="bg-gray-200 text-xl" style="--bg-opacity: 10%;">{{achievement.courses[0]}}</li>
+      </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </main>
+{% endblock %}
